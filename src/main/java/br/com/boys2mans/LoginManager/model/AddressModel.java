@@ -1,4 +1,4 @@
-package model;
+package br.com.boys2mans.LoginManager.model;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -7,35 +7,30 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.time.LocalDateTime;
-import java.util.List;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-@Entity(name = "User")
+@Entity(name = "Address")
 
-public class UserModel {
+public class AddressModel {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    long id;
-    String userName;
+    long Id;
+    String country;
 
-    String email;
+    String state;
 
-    String password;
+    String city;
 
-    LocalDateTime registrationDate;
+    String postalCode;
 
-    LocalDateTime lastAccessDate;
+    String address;
 
-    String token;
+    String complement;
 
-    LocalDateTime tokenValidationDate;
-
-    List<RequestDataModel> access;
 
 
 }

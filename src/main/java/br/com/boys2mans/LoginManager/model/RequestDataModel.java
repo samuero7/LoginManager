@@ -1,12 +1,9 @@
-package model;
+package br.com.boys2mans.LoginManager.model;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 
 @Data
@@ -31,4 +28,7 @@ public class RequestDataModel {
     String geoLocalizationY;
 
     String request;
+
+    @ManyToOne
+    UserModel user;
 }

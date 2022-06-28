@@ -1,4 +1,4 @@
-package model;
+package br.com.boys2mans.LoginManager.model;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -13,24 +13,11 @@ import javax.persistence.Id;
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Builder
-@Entity(name = "Address")
-
-public class AddressModel {
+@Entity(name = "Authorization")
+public class AuthorizationModel extends  TimeRegisterModel{
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     long Id;
-    String country;
-
-    String state;
-
-    String city;
-
-    String postalCode;
-
-    String address;
-
-    String complement;
-
-
+    String accessLevel;
 
 }
