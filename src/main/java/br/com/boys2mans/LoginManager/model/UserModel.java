@@ -42,9 +42,11 @@ public class UserModel extends  TimeRegisterModel {
 
     LocalDateTime tokenValidationDate;
 
-    @NotNull
+
     @OneToMany(mappedBy = "user", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     final List<RequestDataModel> access = new ArrayList<>();
 
 
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    final List<AddressModel> address = new ArrayList<>();
 }
