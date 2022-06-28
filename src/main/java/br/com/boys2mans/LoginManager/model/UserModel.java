@@ -33,7 +33,7 @@ public class UserModel extends  TimeRegisterModel {
     @Column(unique = true)
     String email;
 
-    //TODO: implementar uma valiudação mais rigososa paa sennhas
+    //TODO: implementar uma validação mais rigososa paa senhas
     @NotBlank(message = "Please  enter valid password")
     @Length(min = 4)
     String password;

@@ -34,4 +34,8 @@ public class RequestDataModel {
     UserModel user;
 
     LocalDateTime resgisterdate = LocalDateTime.now();
+
+    @OneToOne(fetch = FetchType.LAZY)
+    AddressModel address;
+
 }
