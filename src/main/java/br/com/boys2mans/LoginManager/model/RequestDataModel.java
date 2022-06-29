@@ -20,7 +20,7 @@ public class RequestDataModel {
 
     String ip;
 
-    String systen;
+    String operationSystem;
 
     String browser;
 

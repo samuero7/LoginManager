@@ -19,6 +19,7 @@ public class AddressModel {
 
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     long Id;
+
     String country;
 
     String state;
